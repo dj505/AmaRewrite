@@ -4,6 +4,6 @@ Rewrite version of Amadeus using discord.py 1.0.0a
 
 ## Credits:
 
-GriffinG1/Midnight  
+SwitchHaxing/Midnight  
 nh-server/Kurisu  
 Various online sources
