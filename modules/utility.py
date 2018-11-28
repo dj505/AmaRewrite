@@ -19,7 +19,10 @@ class Utility:
             wallets = json.load(f)
         if member == None:
             member = ctx.message.author
-        balance = wallets[str(member.id)]
+        try:
+            balance = wallets[str(member.id)]
+        except KeyError:
+            balance = "No balance for this user"
         embed = discord.Embed(title="User information: {}".format(member.name), description=None, color=0x42F448)
         embed.set_thumbnail(url=ctx.message.author.avatar_url)
         embed.add_field(name="ID", value=str(ctx.message.author.id))
