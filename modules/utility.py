@@ -60,5 +60,14 @@ class Utility:
         embed.set_thumbnail(url=self.bot.guild.icon_url)
         await ctx.send(embed=embed)
 
+    @commands.command(pass_context=True, brief="Get member avatar")
+    async def avatar(self, ctx, user:discord.Member = None):
+        embed = discord.Embed(title="Member Avatar")
+        if user == None:
+            embed.set_image(url=ctx.message.author.avatar_url)
+        else:
+            embed.set_image(url=user.avatar_url)
+        await ctx.send(embed=embed)
+
 def setup(bot):
     bot.add_cog(Utility(bot))
