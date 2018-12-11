@@ -21,6 +21,8 @@ if not Path("wallets.json").exists():
     with open("wallets.json","a+") as f:
         f.write("\{\}")
 
+print("Hello! Thanks for using Amadeus!~ Let's get you set up real quick before we're up and running. You'll need the following on hand to get started:")
+print("- Token\n- Description (Can be anything, shows in help message)\n- Prefix\n- Bot Owner ID\n- Server Owner ID\n- Log Channel ID\n- Bot Commands Channel ID\n- Welcome channel ID\n- Admin Role ID\n- Mod Role ID\n- Bot Role ID\n- Default Role ID (Assigned when a member joins)")
 print("Current step: settings.json setup")
 
 token = input("Bot token: ")
