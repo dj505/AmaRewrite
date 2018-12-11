@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import time
 
 settings = {}
 channels = {}
@@ -63,3 +64,5 @@ with open("roles.json","w") as f:
     json.dump(roles, f, indent=2, sort_keys=True)
 
 print("\nSetup complete! Welcome to Amadeus!~")
+print("This window will close in 10 seconds; feel free to close it yourself, all changes have been saved!")
+time.sleep(10)
